@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#336699">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="20dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:id="@+id/signupid" />
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/RadioGroup">
+
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Professors"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/white"
+            android:buttonTint="#19334d"
+            android:onClick="profselect"
+            android:id="@+id/prof" />
+
+
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Students"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/white"
+            android:buttonTint="#19334d"
+            android:checked="true"
+            android:onClick="studselect"
+            android:id="@+id/studs" />
+
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Alumini"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/white"
+            android:onClick="alumselect"
+            android:buttonTint="#19334d"
+            android:id="@+id/alums" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:padding="5dp"
+        android:weightSum="100">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="20">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Name"
+                    android:textColor="#336699"
+                    android:id="@+id/textfname" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#19334d"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:id="@+id/personFname" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Name"
+                        android:textColor="#336699"
+                        android:id="@+id/textLname" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#19334d"
+                        android:textCursorDrawable="@drawable/cursor_color"
+                        android:id="@+id/personLname" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date of Birth"
+                    android:textColor="#336699"
+                    android:id="@+id/textdob" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#19334d"
+                    android:layout_weight="85"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:editable="false"
+                    android:id="@+id/dob" />
+                    <ImageButton
+                        android:layout_width="12dp"
+                        android:src="@drawable/calendar"
+                        android:layout_height="match_parent"
+                        android:layout_weight="15"
+                        android:scaleType="fitXY"
+                        android:id="@+id/cal"
+                        android:onClick="setDate"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textColor="#336699"
+                    android:id="@+id/textgend" />
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/RadioGroupGender">
+
+                    <RadioButton
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="Male"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="#19334d"
+                        android:buttonTint="#19334d"
+                        android:onClick="maleselected"
+                        android:id="@+id/male" />
+
+
+                    <RadioButton
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="Female"
+                        android:layout_marginLeft="50dp"
+                        android:textColor="#19334d"
+                        android:buttonTint="#19334d"
+                        android:onClick="femaleselected"
+                        android:id="@+id/female" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Branch"
+                    android:textColor="#336699"
+                    android:id="@+id/textbranch" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner"
+                    android:entries="@array/branch_array"
+                    android:backgroundTint="#19334d"
+                    android:prompt="@string/branch_prompt"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile No"
+                    android:textColor="#336699"
+                    android:id="@+id/textmob" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mobile_no"
+                    android:backgroundTint="#19334d"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Faculty No"
+                    android:textColor="#336699"
+                    android:id="@+id/textfno" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/faculty_no"
+                    android:backgroundTint="#19334d"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job Details"
+                    android:visibility="gone"
+                    android:textColor="#336699"
+                    android:id="@+id/textjob" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/job_details"
+                    android:visibility="gone"
+                    android:backgroundTint="#19334d"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:layout_gravity="center_horizontal" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textColor="#336699"
+                    android:id="@+id/textmail" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/email"
+                    android:backgroundTint="#19334d"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="#336699"
+                    android:id="@+id/textpass" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sign_pass"
+                    android:inputType="textPassword"
+                    android:backgroundTint="#19334d"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:layout_gravity="center_horizontal" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm Password"
+                    android:textColor="#336699"
+                    android:id="@+id/textcnfpass" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/confirm_sign_pass"
+                    android:inputType="textPassword"
+                    android:backgroundTint="#19334d"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+        </ScrollView>
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="80"
+            android:background="#FFFFFF">
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:layout_marginTop="10dp"
+                android:background="#19334d"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:id="@+id/signingup" />
+        </LinearLayout>
+
+
+
+  </LinearLayout>
+</LinearLayout>
